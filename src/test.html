@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Circular Progress Bar | HTML | CSS | SVG | JS</title>
+  </head>
+  <style>
+    .track {
+      stroke-width: 3;
+      stroke: #4fb6ec;
+      fill: none;
+      stroke-dasharray: 700;
+      /* stroke-dashoffset: 20; */
+    }
+
+    .progress {
+      stroke-width: 4;
+      stroke: #4fb6ec;
+      stroke-linecap: round;
+      fill: none;
+      stroke-dasharray: 20;
+      stroke-dashoffset: 1;
+      /* stroke-opacity: calc(200/1); */
+    }
+  </style>
+
+  <body>
+    <svg width="250" height="250">
+      <circle r="39" cx="125" cy="125" class="track"></circle>
+      <circle r="50" cx="125" cy="125" class="progress"></circle>
+    </svg>
+  </body>
+
+  <!-- <script>
+    let progressCircle = document.querySelector(".progress");
+    let radius = progressCircle.r.baseVal.value;
+    //circumference of a circle = 2πr;
+    let circumference = radius * 2 * Math.PI;
+    progressCircle.style.strokeDasharray = circumference;
+    let temp = progressCircle.style.strokeDasharray
+        //0 to 100
+    let offSetVal = 25;
+    setInterval(() => {
+            // setProgress(offSetVal)
+
+            offSetVal += offSetVal
+            if (offSetVal > temp) {
+                offSetVal = 10
+            }
+            // console.log(offSetVal);
+        }, 100)
+        // setProgress(25);
+
+    function setProgress(percent) {
+        progressCircle.style.strokeDashoffset = circumference - (percent / 100) * circumference;
+    }
+</script> -->
+</html>
